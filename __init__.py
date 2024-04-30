@@ -16,7 +16,7 @@ def est_authentifie():
 def hello_world():
     return render_template('hello.html')
 
-@app.route('/fiche_nom')
+@app.route('/fiche_nom/<string:post_nom>')
 def ReadficheNom(post_nom):
     conn = sqlite3.connect('database.db')
     cursor = conn.cursor()
