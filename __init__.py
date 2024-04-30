@@ -17,6 +17,8 @@ def est_authentifieUser():
 
 @app.route('/')
 def hello_world():
+    session['authentifie'] = False
+    session['authentifieUser'] = False
     return render_template('hello.html')
 
 @app.route('/fiche_nom/<string:post_nom>')
