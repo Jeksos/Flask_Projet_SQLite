@@ -56,8 +56,8 @@ def authentification():
             # Afficher un message d'erreur si les identifiants sont incorrects
             return render_template('formulaire_authentification.html', error=True)
 
-    return render_template('formulaire_authentification.html', error=False)@app.route('/authentification', methods=['GET', 'POST'])
-    
+    return render_template('formulaire_authentification.html', error=False)
+        
 @app.route('/authentificationuser', methods=['GET', 'POST'])
 def authentificationUser():
     if request.method == 'POST':
