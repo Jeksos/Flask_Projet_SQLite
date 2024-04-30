@@ -47,9 +47,10 @@ def authentification():
     if request.method == 'POST':
         # Vérifier les identifiants
         if request.form['username'] == 'admin' and request.form['password'] == 'password': # password à cacher par la suite
-            session['authentifieUser'] = True
+            session['authentifie'] = True
             # Rediriger vers la route lecture après une authentification réussie
-            return redirect(url_for('lecture'))
+            return redirect('#')
+            # return redirect(url_for('lecture'))
         else:
             # Afficher un message d'erreur si les identifiants sont incorrects
             return render_template('formulaire_authentification.html', error=True)
@@ -61,7 +62,7 @@ def authentificationUser():
     if request.method == 'POST':
         # Vérifier les identifiants
         if request.form['username'] == 'user' and request.form['password'] == '12345': # password à cacher par la suite
-            session['authentifie'] = True
+            session['authentifieUser'] = True
             # Rediriger vers la route lecture après une authentification réussie
             return redirect(url_for('lecture'))
         else:
