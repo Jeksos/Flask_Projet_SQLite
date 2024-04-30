@@ -23,7 +23,7 @@ def hello_world():
 def ReadficheNom(post_nom):
     if not est_authentifieUser():
         # Rediriger vers la page d'authentification si l'utilisateur n'est pas authentifié
-        return redirect(url_for('authentificationuser'))
+        return redirect(url_for('authentificationUser'))
 
     conn = sqlite3.connect('database.db')
     cursor = conn.cursor()
